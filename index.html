@@ -1,85 +1,88 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <title>Yannick S. F</title>
-  <link rel="icon" type="image/png" href="asset/favicon.ico">
-  <meta name="author" content="Yannick S. FELER">
-  <meta name="description" content="Siet internet d'un ingénieur informatique.">
-  <meta name="twitter:title" content="Yannick S. F Ingénieur Logicielle">
 
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<head>
+    <meta charset="utf-8">
+    <title>Yannick S. F</title>
+    <link rel="icon" type="image/png" href="asset/favicon.ico">
+    <meta name="author" content="Yannick S. FELER">
+    <meta name="description" content="Site internet d'un ingénieur informatique.">
+    <meta name="twitter:title" content="Yannick S. F Ingénieur Logicielle">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
+
 <body>
     <div id="app">
 
-        <section class="hero is-dark is-large is-desktop is-mobile">
+        <section class="hero is-dark is-medium is-desktop is-mobile">
             <div class="hero-body">
-                <div class="">
-                    <figure class="image is-128x128">
-                        <img class="is-rounded" src="asset/S.png">
-                    </figure>
-                    <br>
-                    <br>
+                <div class="container has-text-centered">
                     <p class="title"> Yannick S. F </p>
-                    <p class="subtitle">L'ensemble de mes inventions.</p>
+                    <br><br>
+                    <p class="subtitle">"Un problème sans solution est un problème mal posé." - Albert Einstein </p>
+                    <strong><p>Mais</p></strong>
+                    <br>
+                    <p class="subtitle">"S'il y a un problème, il y a une solution. S'il n'y a pas de solution c'est qu'il n'y a pas de problème." - Bob Marley </p>
                 </div>
             </div>
         </section>
 
-        <section class="section">
-            <h1 class="title"> Découvrez ce que je fais ! </h1>
-            <br><br>
-            <div class="columns is-multiline">
-                <div v-for="item in sites" class="column is-one-quarter">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-center">
-                                    <p class="title is-4">{{ item.name }}</p>
-                                    <figure class="image is-128x128">
-                                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+        <section class="hero is-fullheight is-desktop is-mobile ">
+            <div class="hero-body ">
+                <div class="container ">
+                    <h1 class="title ">Mes projets</h1>
+                    <br>
+                    <div class="columns is-multiline ">
+                        <div v-for="item in sites " class="column is-one-quarter ">
+                            <div class="card ">
+                                <header class="card-header ">
+                                    <p class="card-header-title ">
+                                        {{ item.name }}
+                                    </p>
+                                </header>
+                                <div class="card-image ">
+                                    <figure class="image is-4by3 ">
+                                        <img src="https://bulma.io/images/placeholders/1280x960.png " alt="Placeholder image ">
                                     </figure>
                                 </div>
+                                <div class="card-content ">
+                                    <div class="content ">
+                                        <p>{{ item.description }}</p>
+                                    </div>
+                                    <footer class="card-footer ">
+                                        <a :href="item.url " class="card-footer-item " target="_about_blank ">Visiter</a>
+                                    </footer>
+                                </div>
                             </div>
-                            <div class="content">
-                                <p>{{ item.description }}</p>
-                            </div>
-                            <footer class="card-footer">
-                                <a :href="item.url" class="card-footer-item" target="_about_blank">Visiter</a>
-                                <a v-on:click="clickLike(item)" class="card-footer-item">Likes : {{ item.likes }}</a>
-                            </footer>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="footer">
-            <div class="content has-text-centered">
-              <p>Forge by <a href="https://linktr.ee/Yannick_SF">Yannick S. F</a></p>
+        <footer class="footer ">
+            <div class="content has-text-centered ">
+                <p> <strong>Forge</strong> by <strong>Yannick S. F</strong> </p>
             </div>
         </footer>
 
     </div>
 </body>
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                sites: [
-                    {name: 'Github', description: "Ma place de développement. \n Il y a tous ce qui ne peut pas être présenté sur un site internet. ", picture: '', url: '#', likes: 0},
-                    {name: 'West Wizard', description: "De la veilles technologique mais pas que au quotidien.", picture: '', url: 'https://westwizard.yannicksf.xyz', likes: 0},
-                    {name: 'Madras NFT', description: "Vous ne savez toujours pas ce qu'est un NFT ? \n J'en ai réalisé quelques-un pour le fun.", picture: '', url: 'https://madras.yannicksf.xyz', likes: 0},
-                    {name: 'Les boulettes du bonheur', description: "Vient voir tu vas adorer :) ", picture: '', url: 'https://happynessball.yannicksf.xyz', likes: 0}
-                ]
-            },
-            methods: {
-                clickLike(item){
-                    item.likes += 1
-                }
-            }
-        })
-    </script>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            sites: [{
+                name: 'Les boulettes du bonheur',
+                description: "Vient voir tu vas adorer :) ",
+                picture: '',
+                url: 'https://happyness.yannicksf.xyz',
+            }]
+        }
+    })
+</script>
+
 </html>
