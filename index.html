@@ -11,23 +11,69 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    <style>
+        body {
+            background: #080707;
+            margin: 0;
+            padding: 0;
+            font-family: 'Open sans', sans-serif;
+        }
+        
+        .title {
+            color: #fffa;
+        }
+        
+        .subtitle {
+            margin-top: 1em;
+            color: #ff0d0d;
+        }
+        
+        p {
+            color: #fff;
+        }
+        
+        header {
+            padding-top: 1em;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        header>img {
+            width: 10em;
+            height: 10em;
+            border-radius: 100%;
+        }
+        
+        header>h1 {
+            margin-top: 2em;
+            padding-bottom: 3em;
+            display: inline-block;
+            font-size: 2em;
+            font-weight: bold;
+            border-radius: 1em;
+            background-color: #000a;
+            color: #ff0d0d;
+            padding: 0.3em 0.6em;
+            border: 1px solid #fff;
+        }
+    </style>
 </head>
 
 <body>
     <div id="app">
 
-        <section class="hero is-dark is-medium is-desktop is-mobile">
-            <div class="hero-body">
-                <div class="container has-text-centered">
-                    <p class="title"> Yannick S. F </p>
-                    <br><br>
-                    <p class="subtitle">"Un problème sans solution est un problème mal posé." - Albert Einstein </p>
-                    <strong><p>Mais</p></strong>
-                    <br>
-                    <p class="subtitle">"S'il y a un problème, il y a une solution. S'il n'y a pas de solution c'est qu'il n'y a pas de problème." - Bob Marley </p>
-                </div>
-            </div>
-        </section>
+        <header>
+            <img id="img" src="./asset/S.png" />
+            <h1> Yannick S. F </h1>
+
+            <p class="subtitle">"Un problème sans solution est un problème mal posé." - Albert Einstein </p>
+            <strong><p>Mais</p></strong>
+            <br>
+            <p class="subtitle">"S'il y a un problème, il y a une solution. S'il n'y a pas de solution c'est qu'il n'y a pas de problème." - Bob Marley </p>
+        </header>
 
         <section class="hero is-fullheight is-desktop is-mobile ">
             <div class="hero-body ">
@@ -64,7 +110,7 @@
 
         <footer class="footer ">
             <div class="content has-text-centered ">
-                <p> <strong>Forge</strong> by <strong>Yannick S. F</strong> </p>
+                <strong>Forge</strong> by <strong>Yannick S.F</strong>
             </div>
         </footer>
 
