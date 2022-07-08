@@ -6,7 +6,7 @@
     <title>Yannick S. F</title>
     <link rel="icon" type="image/png" href="asset/favicon.ico">
     <meta name="author" content="Yannick S. FELER">
-    <meta name="description" content="Site internet d'un ingénieur informatique.">
+    <meta name="description" content="Blog d'un concepteur développeur de logicielle.">
     <meta name="twitter:title" content="Yannick S. F Ingénieur Logicielle">
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -30,7 +30,11 @@
         }
         
         p {
-            color: #fff;
+            color: #000000;
+        }
+        
+        strong {
+            color: #f5e025;
         }
         
         header {
@@ -57,7 +61,11 @@
             background-color: #000a;
             color: #ff0d0d;
             padding: 0.3em 0.6em;
-            border: 1px solid #fff;
+            border: 1px solid #f5e025;
+        }
+        
+        .footer {
+            background-color: #fffa;
         }
     </style>
 </head>
@@ -70,7 +78,7 @@
             <h1> Yannick S. F </h1>
 
             <p class="subtitle">"Un problème sans solution est un problème mal posé." - Albert Einstein </p>
-            <strong><p>Mais</p></strong>
+            <strong>Mais</strong>
             <br>
             <p class="subtitle">"S'il y a un problème, il y a une solution. S'il n'y a pas de solution c'est qu'il n'y a pas de problème." - Bob Marley </p>
         </header>
@@ -81,7 +89,7 @@
                     <h1 class="title ">Mes projets</h1>
                     <br>
                     <div class="columns is-multiline ">
-                        <div v-for="item in sites " class="column is-one-quarter ">
+                        <div v-for="item in sites " class="column is-one-third">
                             <div class="card ">
                                 <header class="card-header ">
                                     <p class="card-header-title ">
@@ -90,7 +98,7 @@
                                 </header>
                                 <div class="card-image ">
                                     <figure class="image is-4by3 ">
-                                        <img src="https://bulma.io/images/placeholders/1280x960.png " alt="Placeholder image ">
+                                        <img :src="item.picture" alt="Placeholder image ">
                                     </figure>
                                 </div>
                                 <div class="card-content ">
@@ -108,7 +116,7 @@
             </div>
         </section>
 
-        <footer class="footer ">
+        <footer class="footer">
             <div class="content has-text-centered ">
                 <strong>Forge</strong> by <strong>Yannick S.F</strong>
             </div>
@@ -121,13 +129,16 @@
     var app = new Vue({
         el: '#app',
         data: {
+            picsum1: '',
+            picsum2: '',
             sites: [{
-                name: 'Les boulettes du bonheur',
-                description: "Vient voir tu vas adorer :) ",
-                picture: '',
-                url: 'https://happyness.yannicksf.xyz',
+                name: '#100DaysOfCode',
+                description: "100 Jours de développement non stop, afin d'améliorer mes skills.",
+                picture: 'https://picsum.photos/id/'.concat(Math.floor(Math.random() * 10).toString(), '/640/480'),
+                url: 'https://twitter.com/_YannickSF/status/1541173835461967872?s=20&t=IAgZwLDL7yLRpWROGOlECQ',
             }]
         }
+
     })
 </script>
 
